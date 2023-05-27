@@ -195,8 +195,7 @@
 #     job_data = json.load(file)
 #
 # # Set up Twilio credentials
-# account_sid = 'ACefaddb8b445cd6b492e20dfcf32015a7'
-# auth_token = '6532483a1063da7db189906aaa513edf'
+# account_sid = ''
 # twilio_phone_number = '+13158475615'
 # receiver_phone_number = '+919773935021'
 #
