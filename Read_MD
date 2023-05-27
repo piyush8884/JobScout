@@ -1,0 +1,222 @@
+# from modules import *
+# import pandas as pd
+#
+# def scrape_jobs():
+#     y = driver.find_elements(By.CSS_SELECTOR, '.results-context-header__job-count')[0].text
+#     n = pd.to_numeric(y)
+#
+#     i = 2
+#     while i <= int((n + 200) / 25) + 1:
+#         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#         i = i + 1
+#
+#         try:
+#             send = driver.find_element_by_xpath("//button[@aria-label='Load more results']")
+#             driver.execute_script("arguments[0].click();", send)
+#             time.sleep(2)
+#         except:
+#             pass
+#             time.sleep(2)
+#
+#     companyname = []
+#     titlename = []
+#
+#     try:
+#         for i in range(n):
+#             company = driver.find_elements(By.CSS_SELECTOR, '.base-search-card__subtitle')[i].text
+#             companyname.append(company)
+#     except IndexError:
+#         print('No company names found.')
+#
+#     try:
+#         for i in range(n):
+#             title = driver.find_elements(By.CSS_SELECTOR, '.base-search-card__title')[i].text
+#             titlename.append(title)
+#     except IndexError:
+#         print('No job titles found.')
+#
+#     jobList = driver.find_elements(By.CSS_SELECTOR, '.base-card__full-link')
+#     hrefList = []
+#     for e in jobList:
+#         hrefList.append(e.get_attribute('href'))
+#
+#     driver.quit()
+#
+#     return companyname, titlename, hrefList
+#
+# company_names, job_titles, job_links = scrape_jobs()
+#
+# print("Company Names:")
+# if len(company_names) == 0:
+#     print("No company found.")
+# else:
+#     print(company_names)
+#
+# print("Job Titles:")
+# print(job_titles)
+# print("Job Links:")
+# print(job_links)
+# from modules import *
+# import pandas as pd
+#
+# def scrape_jobs():
+#     y = driver.find_elements(By.CSS_SELECTOR, '.results-context-header__job-count')[0].text
+#     n = pd.to_numeric(y)
+#
+#     i = 2
+#     while i <= int((n + 200) / 25) + 1:
+#         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#         i = i + 1
+#
+#         try:
+#             send = driver.find_element_by_xpath("//button[@aria-label='Load more results']")
+#             driver.execute_script("arguments[0].click();", send)
+#             time.sleep(2)
+#         except:
+#             pass
+#             time.sleep(2)
+#
+#     companyname = []
+#     titlename = []
+#
+#     try:
+#         for i in range(n):
+#             company = driver.find_elements(By.CSS_SELECTOR, '.base-search-card__subtitle')[i].text
+#             companyname.append(company)
+#     except:
+#         pass # Set companyname list to empty if no company names are found
+#
+#     try:
+#         for i in range(n):
+#             title = driver.find_elements(By.CSS_SELECTOR, '.base-search-card__title')[i].text
+#             titlename.append(title)
+#     except:
+#         pass# Set titlename list to empty if no job titles are found
+#
+#     jobList = driver.find_elements(By.CSS_SELECTOR, '.base-card__full-link')
+#     hrefList = []
+#     for e in jobList:
+#         hrefList.append(e.get_attribute('href'))
+#
+#     driver.quit()
+#
+#     return companyname, titlename, hrefList
+#
+# company_names, job_titles, job_links = scrape_jobs()
+#
+# print("Company Names:")
+# if len(company_names) == 0:
+#     print("No company names found.")
+# else:
+#     print(company_names)
+#
+# print("Job Titles:")
+# if len(job_titles) == 0:
+#     print("No job titles found.")
+# else:
+#     print(job_titles)
+#
+# print("Job Links:")
+# print(job_links)
+#888888888888888888888888888888888888888888888888888888888*#
+# from modules import *
+# import pandas as pd
+#
+# def scrape_jobs():
+#     y = driver.find_elements(By.CSS_SELECTOR, '.results-context-header__job-count')[0].text
+#     n = pd.to_numeric(y)
+#
+#     i = 2
+#     while i <= int((n + 200) / 25) + 1:
+#         driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+#         i = i + 1
+#
+#         try:
+#             send = driver.find_element_by_xpath("//button[@aria-label='Load more results']")
+#             driver.execute_script("arguments[0].click();", send)
+#             time.sleep(2)
+#         except:
+#             pass
+#             time.sleep(1)
+#
+#     companyname = []
+#     titlename = []
+#
+#     try:
+#         for i in range(n):
+#             company = driver.find_elements(By.CSS_SELECTOR, '.base-search-card__subtitle')[i].text
+#             companyname.append(company)
+#     except:
+#         pass  # Set companyname list to empty if no company names are found
+#
+#     try:
+#         for i in range(n):
+#             title = driver.find_elements(By.CSS_SELECTOR, '.base-search-card__title')[i].text
+#             titlename.append(title)
+#     except:
+#         pass  # Set titlename list to empty if no job titles are found
+#
+#     jobList = driver.find_elements(By.CSS_SELECTOR, '.base-card__full-link')
+#     hrefList = []
+#     for e in jobList:
+#         hrefList.append(e.get_attribute('href'))
+#
+#     driver.quit()
+#
+#     return companyname, titlename, hrefList
+#
+# def print_job_details(company_names, job_titles, job_links):
+#     print("Company Names:")
+#     if len(company_names) == 0:
+#         print("No company names found.")
+#     else:
+#         print(company_names)
+#
+#     print("\nJob Titles:")
+#     if len(job_titles) == 0:
+#         print("No job titles found.")
+#     else:
+#         print(job_titles)
+#
+#     print("\nJob Links:")
+#     print(job_links)
+#
+# # Call the function to scrape jobs
+# company_names, job_titles, job_links = scrape_jobs()
+#
+# # Call the function to print job details
+# print_job_details(company_names, job_titles, job_links)
+
+# from twilio.rest import Client
+# import json
+#
+# # Load job data from JSON file
+# with open('job_data.json', 'r') as file:
+#     job_data = json.load(file)
+#
+# # Set up Twilio credentials
+# account_sid = 'ACefaddb8b445cd6b492e20dfcf32015a7'
+# auth_token = '6532483a1063da7db189906aaa513edf'
+# twilio_phone_number = '+13158475615'
+# receiver_phone_number = '+919773935021'
+#
+# # Connect to Twilio client
+# client = Client(account_sid, auth_token)
+#
+# # Get the first three job entries
+# job_entries = list(job_data.items())[:3]
+#
+# # Compose the message with job data
+# message = "This is the Latest Job Openings on Linkdln"
+# for title, url in job_entries:
+#     message += f"{title}: {url}\n"
+#
+# # Send SMS using Twilio
+# sms = client.messages.create(
+#     body=message,
+#     from_=twilio_phone_number,
+#     to=receiver_phone_number
+# )
+#
+# # Print SMS SID to confirm successful sending
+# print(sms.sid)
